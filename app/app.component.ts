@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
               <div><label> Mobile: </label>{{best_friend.mobile}}</div>
               <div>
                 <label>Name: </label>
+                <!--<input #friend_name  (keyup.enter)="showMe(friend_name.value)" placeholder="name">-->
                 <input  [(ngModel)]="best_friend.name" placeholder="name">
             
               </div>
@@ -19,11 +20,16 @@ export class AppComponent {
         mobile: 495367667,
         name: 'Jomon John'
     };
+    // binding event Only
+    /* showMe(friend_name: String){
+     console.log(friend_name);
+     }*/
 }
 
 export class MyBestFriend {
     mobile:number;
     name:string;
+
 
 }
 
